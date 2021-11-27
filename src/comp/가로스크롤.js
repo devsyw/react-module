@@ -1,25 +1,14 @@
 import "./App.css";
 import HorizontalScroll from "react-scroll-horizontal";
-import { useEffect } from "react";
 
 //가로스크롤
 export default function App() {
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll); //clean up
-    };
-  }, []);
-
-  const handleScroll = () => {
-    console.log('scrolled');
-  };
 
   return (
     <div className="fullPage">
       <HorizontalScroll>
         <div className="child bg1">
-          <h1 style={{fontSize : 50, color : '#000'}}>화면 1</h1>
+          <h1>화면 1</h1>
         </div>
 
         <div className="child bg2">
